@@ -1,0 +1,1 @@
+A Sequelize demo application

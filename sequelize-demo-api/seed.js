@@ -16,6 +16,8 @@ const seedDatabase = async () => {
     await sequelize.sync({ alter: true });
 
     // Then seed the User and Post data
+    // Note: if this file is run more than once,
+    // it will fail because of duplicate users.
     await User.bulkCreate(userData);
     console.log('User data has been seeded!');
 
